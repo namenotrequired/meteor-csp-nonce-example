@@ -15,3 +15,4 @@ shell-server            # Server-side component of the `meteor shell` command
 webapp                  # Serves a Meteor app over HTTP
 server-render           # Support for server-side rendering
 browser-policy
+random

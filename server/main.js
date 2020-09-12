@@ -1,12 +1,10 @@
-import { Meteor } from "meteor/meteor";
 import { onPageLoad } from "meteor/server-render";
+import { BrowserPolicy } from 'meteor/browser-policy';
+
+const nonce = 'whatever';
+BrowserPolicy.content.allowScriptOrigin(`nonce-${nonce}`);
 
 WebAppInternals.setInlineScriptsAllowed(false);
-
-Meteor.startup(() => {
-  // Code to run on server startup.
-  console.log(`Greetings from ${module.id}!`);
-});
 
 onPageLoad(sink => {
   // Code to run on every request.
